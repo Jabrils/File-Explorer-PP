@@ -4,6 +4,9 @@ usage: File Explorer ++ [-h] [-v] -i INPUT [-o OUTPUT] {shrink} ...
 
         If you're reading this, YOU'VE BEEN HAX!
 
+        Install Requirements:
+                pip install -r requirements.txt
+
         How to use:
                 python fepp.py --input 'path_to_image.png' --output '_' shrink --size 64 64
 

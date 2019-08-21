@@ -25,6 +25,8 @@ def Shrink(file, size):
 def main(command_line=None):
     parser = argparse.ArgumentParser('File Explorer ++',description=
     "\n\n\tIf you're reading this, YOU'VE BEEN HAX!"
+    +"\n\n\tInstall Requirements:"
+    +"\n\t\tpip install -r requirements.txt"
     +"\n\n\tHow to use:"
     +"\n\t\tpython fepp.py --input 'path_to_image.png' --output '_' shrink --size 64 64"
     +"\n\n\tFile Explorer ++ can currently shrink a single file of your choosing to any size smaller than that, but can also batch this operation! "
