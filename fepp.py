@@ -25,19 +25,22 @@ def Shrink(file, size):
 def main(command_line=None):
     parser = argparse.ArgumentParser('File Explorer ++',description=
     "\n\n\tIf you're reading this, YOU'VE BEEN HAX!"
+    +"\n\n\tHow to use:"
+    +"\n\t\tpython fepp.py --input 'path_to_image.png' --output '_' shrink --size 64 64"
     +"\n\n\tFile Explorer ++ can currently shrink a single file of your choosing to any size smaller than that, but can also batch this operation! "
-    +"Have a directory that has a mix of text files, zip files, exe, etc? No worries, this supports batch processesing for all JPEGs & PNGs (will test for other formats later)"
+    +"Have a directory that has a mix of text files, zip files, exe, etc? No worries, this supports batch processesing for all JPEGs & PNGs & will skip any other files (will test for other formats later)"
     +"\n\n\tThe roadmap consists of:"
     +"\n\t\t- Full resizing features"
     +"\n\t\t- Image Sorter by Color Space"
     +"\n\t\t- Toggle if you want to save all changes into its own directory"
+    +"\n\t\t- While using a specific output name, iterate if a folder input was selected"
     +"\n\n\tEnjoy until the next update! ^^"
     ,formatter_class=argparse.RawTextHelpFormatter)#, add_help=False)
 
-    parser.add_argument('-v', '--version', action='version', version='%(prog)s 1.0', help="Show program's version number and exit.")
+    parser.add_argument('-v', '--version', action='version', version='%(prog)s 1.1', help="Show program's version number and exit.")
     # parser.add_argument('-h', '--help', action='help', default=argparse.SUPPRESS, help='This script can')
-    parser.add_argument('-i', '--input', required=True, type=str, help='designate the input file')
-    parser.add_argument('-o', '--output', default=None, type=str, help='designate the output file')
+    parser.add_argument('-i', '--input', required=True, type=str, help='designate the input file, or folder. If folder is chosen, FEPP will process all of the JPEGs & PNGs in that folder.')
+    parser.add_argument('-o', '--output', default=None, type=str, help='designate the output file. Use "_" to output image_name + _shrink')
 
     subprasers = parser.add_subparsers(dest='command')
  
