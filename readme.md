@@ -10,7 +10,7 @@ usage: File Explorer ++ [-h] [-v] -i INPUT [-o OUTPUT] {shrink} ...
         How to use:
                 python fepp.py --input 'path_to_image.png' --output '_' shrink --size 64 64
 
-        File Explorer ++ can currently shrink a single file of your choosing to any size smaller than that, but can also batch this operation! Have a directory that has a mix of text files, zip files, exe, etc? No worries, this supports batch processesing for all JPEGs & PNGs & will skip any other files (will test for other formats later)
+        File Explorer ++ can currently shrink a single file of your choosing to any size smaller than that, but can also batch this operation! Have a directory that has a mix of text files, zip files, exe, etc? No worries, this supports batch processing for all JPEGs & PNGs & will skip any other files (will test for other formats later)
 
         The roadmap consists of:
                 - Full resizing features
